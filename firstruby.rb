@@ -1,6 +1,11 @@
 # encoding: utf-8
 #!/usr/bin/ruby -w
 
+$LOAD_PATH << '.'
+
+
+require 'config.rb'
+
 class LearningRuby
     def initialize(modulex,learned,results=nil)
         @modulex,@learned,@results = modulex,learned,results
@@ -15,6 +20,7 @@ class LearningRuby
 end
 
 
+puts "loading config FILE: #{PICES}"
 modulex = ['ruby','rails','gems']
 learned = ['ruby']
 rests = modulex - learned
@@ -32,7 +38,7 @@ END{
 }
 
 BEGIN{
-    puts "this is first line of a block"    
+    puts "this is first line of a block"   
 }
 
 
